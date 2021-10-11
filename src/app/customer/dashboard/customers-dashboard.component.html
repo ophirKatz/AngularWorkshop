@@ -1,0 +1,9 @@
+<div class="dashboard-container flex-column">
+  <div class="header flex-row">
+    <h1>Customers</h1>
+  </div>
+  <div class="master-detail flex-row">
+    <app-customers-list [customers]="customers" (customerSelected)="onCustomerSelected($event)"></app-customers-list>
+    <app-customer-details [customer]="selectedCustomer"></app-customer-details>
+  </div>
+</div>

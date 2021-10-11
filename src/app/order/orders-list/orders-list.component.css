@@ -1,0 +1,11 @@
+.order {
+  border-radius: 1rem;
+  border: 1rem;
+  background: gray;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.details {
+  width: 20rem;
+}

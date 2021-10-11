@@ -1,0 +1,8 @@
+<div class="flex-column customers">
+  <div class="order flex-col" *ngFor="let customer of customers">
+    <div class="customer" (click)="onCustomerSelected(customer)">
+      <h3>Customer {{customer.id}}</h3>
+      <p>Name: {{customer.name}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="dashboard" *ngIf="customer">
+  <div class="details flex-column">
+    <h2>Customer {{customer.id}} - {{customer.name}}</h2>
+    <div class="stars">
+      {{customer.name}} has {{customer.stars}} stars!
+    </div>
+    <div *ngIf="customer.address as address" class="address flex-column">
+      <h3>Address: {{address.address}}</h3>
+      <h4>Generally ship to: {{address.defaultShippingAddress}}</h4>
+    </div>
+  </div>
+  <div class="notables">
+    <div class="card">
+      <!-- Total number of orders -->
+    </div>
+    <div class="card">
+      <!-- Most ordered item -->
+    </div>
+    <!-- TODO : Add a card with the customer's last order's detail -->
+  </div>
+</div>

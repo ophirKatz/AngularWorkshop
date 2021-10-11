@@ -1,0 +1,11 @@
+<h1>Orders</h1>
+<div class="flex-column orders">
+  <div class="order flex-col" *ngFor="let order of orders" (click)="onOrderClicked($event)">
+    <!-- TODO : Extract single-file component -->
+    <h3>Order {{order.id}}</h3>
+    <div class="details">
+      <p>For {{order.amount}} of product {{order.productId}}</p>
+      <p>Made by customer {{order.customerId}}</p>
+    </div>
+  </div>
+</div>
