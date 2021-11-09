@@ -1,0 +1,31 @@
+.customer-dashboard {
+  padding: 0 2rem 0 2rem;
+}
+
+.details-card {
+  width: -webkit-fill-available;
+  border: 0.1rem solid #000000;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+}
+
+.details {
+  padding: 1rem;
+}
+
+.cards {
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 20rem;
+  height: 10rem;
+  border: 0.1rem solid black;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}

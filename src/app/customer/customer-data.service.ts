@@ -1,4 +1,4 @@
-import { Customer } from './customer';
+import { Customer, CustomerDetails } from './customer';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
@@ -22,7 +22,8 @@ export class CustomerDataService {
         address: {
           address: 'Metula',
           defaultShippingAddress: 'Hadera'
-        }
+        },
+        memberSince: new Date(2020, 5, 31)
       },
       {
         id: 2,
@@ -31,7 +32,8 @@ export class CustomerDataService {
         address: {
           address: 'Yokneam',
           defaultShippingAddress: 'Haifa'
-        }
+        },
+        memberSince: new Date(2019, 8, 2)
       },
       {
         id: 3,
@@ -40,7 +42,8 @@ export class CustomerDataService {
         address: {
           address: 'Hadera',
           defaultShippingAddress: 'Hadera'
-        }
+        },
+        memberSince: new Date()
       },
       {
         id: 4,
@@ -49,10 +52,27 @@ export class CustomerDataService {
         address: {
           address: 'K. Motzkin',
           defaultShippingAddress: 'K. Motzkin'
-        }
+        },
+        memberSince: new Date(2020, 10, 5)
       },
     ];
     return of(customers);
   }
 
+  public getCustomerDetails(id: number): Promise<CustomerDetails> {
+    const customerDetails: CustomerDetails = {
+      totalOrders: 500 + id,
+      mostOrderedProduct: {
+        product: {
+          id: 8,
+          name: 'IPhone 13'
+        },
+        amount: 1400 + id
+      },
+    };
+
+    return Promise.resolve(customerDetails);
+  }
+
 }
+

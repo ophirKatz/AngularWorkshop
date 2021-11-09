@@ -1,20 +1,54 @@
-<div class="dashboard" *ngIf="customer">
-  <div class="details flex-column">
-    <h2>Customer {{customer.id}} - {{customer.name}}</h2>
-    <div class="stars">
-      {{customer.name}} has {{customer.stars}} stars!
-    </div>
-    <div *ngIf="customer.address as address" class="address flex-column">
-      <h3>Address: {{address.address}}</h3>
-      <h4>Generally ship to: {{address.defaultShippingAddress}}</h4>
+<div class="customer-dashboard" *ngIf="customer">
+  <div class="details-card">
+    <div class="details flex-column">
+      <h2>Customer {{customer.id}} - {{customer.name}}</h2>
+      <div class="stars">
+        {{customer.name}} has {{customer.stars}} stars!
+      </div>
+      <p>Member since: {{customer.memberSince | date}}</p>
     </div>
   </div>
-  <div class="notables">
+  <div class="cards" *ngIf="customerDetails$ | async as customerDetails">
     <div class="card">
       <!-- Total number of orders -->
+      <div class="card-header">
+        <h3>Total number of orders</h3>
+      </div>
+      <div class="card-content">
+        {{customerDetails.totalOrders}}
+      </div>
     </div>
     <div class="card">
-      <!-- Most ordered item -->
+      <!-- Most ordered product -->
+      <div class="card-header">
+        <h3>Most ordered product</h3>
+      </div>
+      <div class="card-content">
+        <p>
+          Ordered {{customerDetails.mostOrderedProduct.amount}} units of
+          {{customerDetails.mostOrderedProduct.product.name}}
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <!-- Address -->
+      <div class="card-header">
+        <h3>Addresses</h3>
+      </div>
+      <div class="card-content flex-column" *ngIf="customer.address as address">
+        <p>Home address: {{address.address}}</p>
+        <p>Generally ship to: {{address.defaultShippingAddress}}</p>
+      </div>
+    </div>
+    <div class="card">
+      <!-- Address -->
+      <div class="card-header">
+        <h3>Addresses</h3>
+      </div>
+      <div class="card-content flex-column" *ngIf="customer.address as address">
+        <p>Home address: {{address.address}}</p>
+        <p>Generally ship to: {{address.defaultShippingAddress}}</p>
+      </div>
     </div>
     <!-- TODO : Add a card with the customer's last order's detail -->
   </div>

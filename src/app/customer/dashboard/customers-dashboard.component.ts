@@ -3,7 +3,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CustomerDataService } from '../customer-data.service';
 
 // TODO 1 : Add a subscription
-// TODO 1 : Use async pipe to avoid explicitly subscribing and unsubscribing
+// TODO 2 : Use async pipe to avoid explicitly subscribing and unsubscribing
 
 @Component({
   selector: 'app-customers-dashboard',
@@ -20,7 +20,10 @@ export class CustomersDashboardComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // TODO : Missing a Subscription
     this.customerService.customers$.subscribe(
-      (cs: Customer[]) => this.customers = cs
+      (cs: Customer[]) => {
+        this.customers = cs;
+        this.selectedCustomer = cs[1];
+      }
     );
   }
 

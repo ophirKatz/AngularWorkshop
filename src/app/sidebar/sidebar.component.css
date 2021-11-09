@@ -2,3 +2,12 @@
   display: flex;
   flex-direction: column;
 }
+
+.link {
+  min-height: 3rem;
+  font-size: x-large;
+}
+
+.link:hover {
+  opacity: 30%;
+}

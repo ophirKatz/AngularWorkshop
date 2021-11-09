@@ -11,6 +11,7 @@ export class CustomerJsonDataService extends CustomerDataService {
 
   constructor(private http: HttpClient) {
     super();
+    console.log('This is the CustomerJsonDataService');
   }
 
   protected fetchData(): Observable<Customer[]> {

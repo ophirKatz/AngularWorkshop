@@ -1,5 +1,4 @@
 import { AppRoutingModule } from './app-routing.module';
-import { OrderModule } from './order/order.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -15,7 +14,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     BrowserModule,
     AppRoutingModule,
     // TODO : Import OrdersModule
-    OrderModule
+    // LoggingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

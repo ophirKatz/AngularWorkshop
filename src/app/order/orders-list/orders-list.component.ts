@@ -1,3 +1,4 @@
+import { GlobalService } from './../../shared/global.service';
 import { OrderDataService } from './../order-data.service';
 import { Component, OnInit } from '@angular/core';
 import { Order } from '../order';
@@ -11,7 +12,11 @@ export class OrdersListComponent implements OnInit {
 
   orders: Order[];
 
-  constructor(private ordersService: OrderDataService) { }
+  constructor(
+    private ordersService: OrderDataService
+  ) {
+
+  }
 
   ngOnInit(): void {
     this.orders = this.ordersService.orders;
@@ -22,3 +27,5 @@ export class OrdersListComponent implements OnInit {
   }
 
 }
+
+

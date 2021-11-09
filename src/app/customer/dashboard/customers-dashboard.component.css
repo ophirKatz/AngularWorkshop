@@ -1,0 +1,7 @@
+.dashboard-container {
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+app-customers-list {
+  width: 10rem;
+}

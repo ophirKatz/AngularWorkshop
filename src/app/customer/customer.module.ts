@@ -7,7 +7,6 @@ import { CustomerRoutingModule } from './customer-routing.module';
 
 @NgModule({
   providers: [
-    // TODO : Change to CustomerJsonDataService
     CustomerDataService
   ],
   imports: [

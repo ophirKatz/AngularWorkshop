@@ -6,8 +6,8 @@ import { Order } from './order';
 })
 export class OrderDataService {
 
-  // When the data is read from a remote - use observable for absent data abstraction
-  // When the data is read only at request (for example, a sort/filter on a list/table) - subscribe on the observable
+  // When the data is read from a remote and is regenerative - use observable for absent data abstraction
+  // When the data is read only at request (for example, a sort/filter on a list/table) - subscribe on the observable/use a promise
 
   // TODO : Make readonly - think why?
   // TODO : Refactor service-Api to asynchronous
