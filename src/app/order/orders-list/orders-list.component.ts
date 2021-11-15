@@ -1,4 +1,3 @@
-import { GlobalService } from './../../shared/global.service';
 import { OrderDataService } from './../order-data.service';
 import { Component, OnInit } from '@angular/core';
 import { Order } from '../order';

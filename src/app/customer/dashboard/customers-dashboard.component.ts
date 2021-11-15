@@ -20,6 +20,7 @@ export class CustomersDashboardComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // TODO : Missing a Subscription
     this.customerService.customers$.subscribe(
+      // TODO : Use the rxjs map operator instead
       (cs: Customer[]) => {
         this.customers = cs;
         this.selectedCustomer = cs[1];

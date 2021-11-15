@@ -10,6 +10,10 @@ export class AppComponent {
 
   constructor(public globals: GlobalService) { }
 
+  onValueChanged(e): void {
+    console.log(`Changed value is ${e}`);
+  }
+
 }
 
 
