@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SuperDuperComponent } from './super-duper/super-duper.component';
 import { FormsModule } from '@angular/forms';
+import { InheritanceModule } from './inheritance/inheritance.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    InheritanceModule,
     // TODO : Import OrdersModule
     // LoggingModule
   ],

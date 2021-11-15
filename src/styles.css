@@ -51,3 +51,7 @@ body {
 .container {
   margin: 2rem;
 }
+
+.hidden {
+  display: none;
+}

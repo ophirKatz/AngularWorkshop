@@ -5,5 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class GlobalService {
   public codeAuthor = 'Ophir Katz';
+
+  public penguinLegs = 2;
 }
 

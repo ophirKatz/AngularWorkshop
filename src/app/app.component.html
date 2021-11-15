@@ -1,4 +1,12 @@
-<app-super-duper value="This is the value" (changed)="onValueChanged($event)"></app-super-duper>
+<!-- <div> -->
+<div class="hidden">
+  <!-- Component Example -->
+  <app-super-duper value="This is the value" (changed)="onValueChanged($event)"></app-super-duper>
+
+  <!-- Inheritance Example -->
+  <app-dog numberOfLegs="4"></app-dog>
+  <app-penguin [numberOfLegs]="globals.penguinLegs"></app-penguin>
+</div>
 
 <div class="flex-col app-container full-size">
   <!-- TODO : Extract Topbar component -->
