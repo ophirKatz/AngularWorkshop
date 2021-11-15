@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  public stage: 'Demo' | 'Showcase' = 'Showcase';
+
   constructor(public globals: GlobalService) { }
 
   onValueChanged(e): void {

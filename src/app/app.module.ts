@@ -4,21 +4,22 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { SuperDuperComponent } from './super-duper/super-duper.component';
-import { FormsModule } from '@angular/forms';
 import { InheritanceModule } from './inheritance/inheritance.module';
+import { ChangeDetectionModule } from './change-detection/change-detection.module';
+import { ComponentOverviewModule } from './component-overview/component-overview.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    SuperDuperComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    ComponentOverviewModule,
     InheritanceModule,
+    ChangeDetectionModule,
+
     // TODO : Import OrdersModule
     // LoggingModule
   ],

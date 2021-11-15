@@ -9,6 +9,6 @@ import { AnimalComponent } from './animal.component';
 })
 export class PenguinComponent extends AnimalComponent {
   public makeSound(): string {
-    return 'Cat';
+    return 'Penguin';
   }
 }

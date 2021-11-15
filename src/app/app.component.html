@@ -1,14 +1,19 @@
-<!-- <div> -->
-<div class="hidden">
+<div *ngIf="stage === 'Showcase'">
   <!-- Component Example -->
   <app-super-duper value="This is the value" (changed)="onValueChanged($event)"></app-super-duper>
+  <hr />
 
   <!-- Inheritance Example -->
   <app-dog numberOfLegs="4"></app-dog>
   <app-penguin [numberOfLegs]="globals.penguinLegs"></app-penguin>
+  <hr />
+
+  <!-- Change Detection -->
+  <app-change-detection></app-change-detection>
+  <hr />
 </div>
 
-<div class="flex-col app-container full-size">
+<div class="flex-col app-container full-size" *ngIf="stage === 'Demo'">
   <!-- TODO : Extract Topbar component -->
   <div class="topbar flex-row">
     <h1>Angular Workshop</h1>
