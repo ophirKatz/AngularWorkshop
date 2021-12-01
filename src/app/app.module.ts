@@ -1,3 +1,4 @@
+import { RxjsModule } from './rxjs/rxjs.module';
 import { ENV, environment } from './../environments/environment';
 import { PipesAndDirectivesModule } from './pipes-and-directives/pipes-and-directives.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +23,7 @@ import { ComponentOverviewModule } from './component-overview/component-overview
     InheritanceModule,
     ChangeDetectionModule,
     PipesAndDirectivesModule,
+    RxjsModule
 
     // TODO : Import OrdersModule
     // LoggingModule
