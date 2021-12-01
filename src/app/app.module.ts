@@ -1,3 +1,4 @@
+import { ENV, environment } from './../environments/environment';
 import { PipesAndDirectivesModule } from './pipes-and-directives/pipes-and-directives.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -25,7 +26,12 @@ import { ComponentOverviewModule } from './component-overview/component-overview
     // TODO : Import OrdersModule
     // LoggingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: ENV,
+      useValue: environment
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
