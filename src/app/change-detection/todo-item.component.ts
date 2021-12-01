@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { TodoItem } from './todo-item';
 
 @Component({
@@ -9,12 +9,16 @@ import { TodoItem } from './todo-item';
     </span>
   `
 })
-export class TodoItemComponent implements OnInit {
+export class TodoItemComponent implements OnInit, OnChanges {
 
   @Input() item: TodoItem;
   @Output() toggle: EventEmitter<TodoItem> = new EventEmitter<TodoItem>(null);
 
   constructor() { }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('On Changes');
+  }
 
   ngOnInit(): void {
 

@@ -1,3 +1,4 @@
+import { PipesAndDirectivesModule } from './pipes-and-directives/pipes-and-directives.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -11,7 +12,7 @@ import { ComponentOverviewModule } from './component-overview/component-overview
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +20,7 @@ import { ComponentOverviewModule } from './component-overview/component-overview
     ComponentOverviewModule,
     InheritanceModule,
     ChangeDetectionModule,
+    PipesAndDirectivesModule,
 
     // TODO : Import OrdersModule
     // LoggingModule

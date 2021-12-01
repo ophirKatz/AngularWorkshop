@@ -1,15 +1,18 @@
 <div *ngIf="stage === 'Showcase'">
   <!-- Component Example -->
-  <app-super-duper value="This is the value" (changed)="onValueChanged($event)"></app-super-duper>
+  <!-- <app-super-duper value="This is the value" (changed)="onValueChanged($event)"></app-super-duper> -->
   <hr />
 
   <!-- Inheritance Example -->
-  <app-dog numberOfLegs="4"></app-dog>
-  <app-penguin [numberOfLegs]="globals.penguinLegs"></app-penguin>
+  <!-- <app-dog numberOfLegs="4"></app-dog>
+  <app-penguin [numberOfLegs]="globals.penguinLegs"></app-penguin> -->
   <hr />
 
   <!-- Change Detection -->
-  <app-change-detection></app-change-detection>
+  <!-- <app-change-detection></app-change-detection> -->
+  <hr />
+
+  <app-pipes-and-directives></app-pipes-and-directives>
   <hr />
 </div>
 
