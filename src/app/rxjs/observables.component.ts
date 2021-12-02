@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, OnDestroy } from '@angular/core';
 import { todos$, Todo } from './data';
 import { filter, map } from 'rxjs/operators';
 
@@ -13,7 +13,7 @@ export type IndexedTodo = {
   templateUrl: './observables.component.html',
   styleUrls: ['./observables.component.css']
 })
-export class ObservablesComponent implements OnInit {
+export class ObservablesComponent implements OnInit, OnDestroy {
 
   public todos: IndexedTodo[];
 
@@ -30,6 +30,10 @@ export class ObservablesComponent implements OnInit {
       this.todos = todos;
       this.cd.detectChanges();
     });
+  }
+
+  ngOnDestroy(): void {
+
   }
 
   private indexTodo(todo: Todo, index: number): IndexedTodo {

@@ -1,31 +1,45 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DoCheck, Input } from '@angular/core';
 import { TodoItem } from './todo-item';
 
 @Component({
   selector: 'app-todo-item',
   template: `
-    <span (click)="onToggle()" *ngIf="item">
-      {{item.description}} - completed: {{item.completed}}
-    </span>
-  `
+    <p>{{todo.description}} - completed: {{todo.completed}}</p>
+    <app-child></app-child>
+  `,
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TodoItemComponent implements OnInit, OnChanges {
+export class TodoItemComponent implements DoCheck {
 
-  @Input() item: TodoItem;
-  @Output() toggle: EventEmitter<TodoItem> = new EventEmitter<TodoItem>(null);
+  @Input() todo: TodoItem;
 
-  constructor() { }
+  ngDoCheck(): void {
+    console.log('todo-item DoCheck');
+  }
+}
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('On Changes');
+@Component({
+  selector: 'app-child',
+  template: `<app-grandchild *ngFor="let _ of amount"></app-grandchild>`
+})
+export class ChildComponent implements DoCheck {
+
+  public amount = Array(1000);
+
+  ngDoCheck(): void {
+    console.log('child DoCheck');
   }
 
-  ngOnInit(): void {
+}
 
-  }
+@Component({
+  selector: 'app-grandchild',
+  template: ``
+})
+export class GrandchildComponent implements DoCheck {
 
-  public onToggle(): void {
-    this.toggle.emit(this.item);
+  ngDoCheck(): void {
+    console.log('grandchild DoCheck');
   }
 
 }
