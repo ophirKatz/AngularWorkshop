@@ -1,6 +1,5 @@
-import { FileLogger, HttpLogger } from '../app.module';
 import { NgModule } from '@angular/core';
-import { LOGGER } from './logger';
+import { FileLogger, HttpLogger, LOGGER } from './logger';
 
 @NgModule({
   providers: [
