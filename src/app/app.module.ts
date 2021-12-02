@@ -10,6 +10,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { InheritanceModule } from './inheritance/inheritance.module';
 import { ChangeDetectionModule } from './change-detection/change-detection.module';
 import { ComponentOverviewModule } from './component-overview/component-overview.module';
+import { OrderModule } from './order/order.module';
 
 @NgModule({
   declarations: [
@@ -23,9 +24,10 @@ import { ComponentOverviewModule } from './component-overview/component-overview
     InheritanceModule,
     ChangeDetectionModule,
     PipesAndDirectivesModule,
-    RxjsModule
+    RxjsModule,
 
     // TODO : Import OrdersModule
+    OrderModule
     // LoggingModule
   ],
   providers: [

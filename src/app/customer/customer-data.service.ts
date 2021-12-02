@@ -2,15 +2,16 @@ import { Customer, CustomerDetails } from './customer';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
 export class CustomerDataService {
 
-  public readonly customers$: Observable<Customer[]>;
+  private customersInner$: Observable<Customer[]>;
 
-  constructor() {
-    this.customers$ = this.fetchData();
+  public get customers$(): Observable<Customer[]> {
+    if (!this.customersInner$) {
+      this.customersInner$ = this.fetchData();
+    }
+
+    return this.customersInner$;
   }
 
   protected fetchData(): Observable<Customer[]> {

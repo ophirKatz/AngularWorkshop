@@ -4,9 +4,7 @@ import { Customer } from './customer';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CustomerJsonDataService extends CustomerDataService {
 
   constructor(private http: HttpClient) {
@@ -15,6 +13,6 @@ export class CustomerJsonDataService extends CustomerDataService {
   }
 
   protected fetchData(): Observable<Customer[]> {
-    return this.http.get<Customer[]>('data/customers.json');
+    return this.http.get<Customer[]>('assets/data/customers.json');
   }
 }
