@@ -1,6 +1,6 @@
 <div *ngIf="env.mode === 'showcase'">
   <!-- Component Example -->
-  <app-super-duper value="This is the value" (changed)="onValueChanged($event)"></app-super-duper>
+  <!-- <app-super-duper value="This is the value" (changed)="onValueChanged($event)"></app-super-duper> -->
   <hr />
 
   <!-- Inheritance Example -->
@@ -15,7 +15,7 @@
   <!-- <app-pipes-and-directives></app-pipes-and-directives> -->
   <hr />
 
-  <!-- <app-observables></app-observables> -->
+  <app-observables></app-observables>
 </div>
 
 <div class="flex-col app-container full-size" *ngIf="env.mode === 'demo'">

@@ -81,15 +81,3 @@ export class Dummy2Component implements OnInit, OnDestroy {
   }
 
 }
-
-@Component({
-  selector: 'app-subjects',
-  template: ``,
-  styleUrls: [],
-})
-export class SubjectsComponent {
-
-  constructor() {
-  }
-
-}

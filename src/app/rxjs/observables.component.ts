@@ -25,7 +25,7 @@ export class ObservablesComponent implements OnInit, OnDestroy {
       map((todos: Todo[]) => todos.map(this.indexTodo)),
       filter((todos: IndexedTodo[]) => {
         return !todos.some((x: IndexedTodo) => x.title === 'Work');
-      })
+      }),
     ).subscribe(todos => {
       this.todos = todos;
       this.cd.detectChanges();
