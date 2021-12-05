@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { InjectionToken } from '@angular/core';
 
-export const LOGGER: InjectionToken<ILogger> = new InjectionToken<ILogger>('loggers');
+export const LOGGER: InjectionToken<ILogger> = new InjectionToken<ILogger>('LOGGER');
 
 export interface ILogger {
   log(msg: string): void | Promise<void>;

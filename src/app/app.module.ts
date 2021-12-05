@@ -26,7 +26,6 @@ import { OrderModule } from './order/order.module';
     PipesAndDirectivesModule,
     RxjsModule,
 
-    // TODO : Import OrdersModule
     OrderModule
     // LoggingModule
   ],
