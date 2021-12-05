@@ -9,6 +9,6 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     OrdersListModule,
     OrderRoutingModule
-  ]
+  ],
 })
 export class OrderModule { }
