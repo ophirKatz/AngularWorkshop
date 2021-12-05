@@ -6,6 +6,7 @@
     <div class="details">
       <p>For {{order.amount}} of product {{order.productId}}</p>
       <p>Made by customer {{order.customerId}}</p>
+      <button (click)="trackOrder(order.id)">Track</button>
     </div>
   </div>
 </div>

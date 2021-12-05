@@ -1,1 +1,6 @@
-<p>tracking works!</p>
+<div *ngIf="order">
+  <h1>Tracking order #{{order.id}}</h1>
+  <div class="progress">
+    Progress of order {{order.id}} is {{currentProgress?.progress}} out of 100
+  </div>
+</div>
