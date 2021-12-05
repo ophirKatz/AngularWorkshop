@@ -1,10 +1,9 @@
 import { SubSink } from 'subsink';
 import { OrderDataService } from './../order-data.service';
-import { Component, Inject, OnInit, OnDestroy, DoCheck } from '@angular/core';
+import { Component, Inject, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { map, switchMap, tap } from 'rxjs/operators';
 import { Order } from '../order';
-import { Observable } from 'rxjs';
 import { IOrderTrackingService, ORDER_TRACKING } from './order-tracking-service';
 import { OrderProgress } from './order-progress';
 
@@ -36,7 +35,6 @@ export class OrderTrackingComponent implements OnInit, OnDestroy {
       switchMap((order: Order) => this.orderTracker.trackProgress(order.id)),
     ).subscribe((progress: OrderProgress) => {
       this.currentProgress = progress;
-      console.log('Current progress', progress.progress);
     });
   }
 
