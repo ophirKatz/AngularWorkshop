@@ -33,7 +33,7 @@ export class CustomersDashboardComponent implements OnInit, OnDestroy {
   }
 
   onCustomerSelected(c: Customer): void {
-    console.log('Selected customer');
+    console.log('Selected customer', c.id);
     this.selectedCustomer = c;
   }
 
