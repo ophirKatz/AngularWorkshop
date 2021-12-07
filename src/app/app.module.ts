@@ -1,3 +1,4 @@
+import { ServerConnectionModule } from './server-connection/server-connection.module';
 import { RxjsModule } from './rxjs/rxjs.module';
 import { ENV, environment } from './../environments/environment';
 import { PipesAndDirectivesModule } from './pipes-and-directives/pipes-and-directives.module';
@@ -11,6 +12,7 @@ import { InheritanceModule } from './inheritance/inheritance.module';
 import { ChangeDetectionModule } from './change-detection/change-detection.module';
 import { ComponentOverviewModule } from './component-overview/component-overview.module';
 import { OrderModule } from './order/order.module';
+import { StateManagementModule } from './state-management/state-management.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { OrderModule } from './order/order.module';
     ChangeDetectionModule,
     PipesAndDirectivesModule,
     RxjsModule,
+    StateManagementModule,
+    ServerConnectionModule,
 
     OrderModule
     // LoggingModule
