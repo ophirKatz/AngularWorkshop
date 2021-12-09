@@ -1,3 +1,4 @@
+import { FacadeModule } from './facade/facade.module';
 import { CssPatternsModule } from './css-patterns/css-patterns.module';
 import { ServerConnectionModule } from './server-connection/server-connection.module';
 import { RxjsModule } from './rxjs/rxjs.module';
@@ -31,6 +32,7 @@ import { StateManagementModule } from './state-management/state-management.modul
     StateManagementModule,
     ServerConnectionModule,
     CssPatternsModule,
+    FacadeModule,
 
     OrderModule
     // LoggingModule
