@@ -1,3 +1,4 @@
+import { RoutingModule } from './routing/routing.module';
 import { TemplateSelectionModule } from './template-selection/template-selection.module';
 import { FacadeModule } from './facade/facade.module';
 import { CssPatternsModule } from './css-patterns/css-patterns.module';
@@ -35,6 +36,7 @@ import { StateManagementModule } from './state-management/state-management.modul
     CssPatternsModule,
     FacadeModule,
     TemplateSelectionModule,
+    RoutingModule,
 
     OrderModule
     // LoggingModule
