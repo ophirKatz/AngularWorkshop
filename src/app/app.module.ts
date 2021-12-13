@@ -1,3 +1,4 @@
+import { TemplateSelectionModule } from './template-selection/template-selection.module';
 import { FacadeModule } from './facade/facade.module';
 import { CssPatternsModule } from './css-patterns/css-patterns.module';
 import { ServerConnectionModule } from './server-connection/server-connection.module';
@@ -33,6 +34,7 @@ import { StateManagementModule } from './state-management/state-management.modul
     ServerConnectionModule,
     CssPatternsModule,
     FacadeModule,
+    TemplateSelectionModule,
 
     OrderModule
     // LoggingModule
