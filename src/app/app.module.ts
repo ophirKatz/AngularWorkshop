@@ -17,11 +17,13 @@ import { ChangeDetectionModule } from './change-detection/change-detection.modul
 import { ComponentOverviewModule } from './component-overview/component-overview.module';
 import { OrderModule } from './order/order.module';
 import { StateManagementModule } from './state-management/state-management.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

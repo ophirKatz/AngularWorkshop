@@ -55,3 +55,23 @@ body {
 .hidden {
   display: none;
 }
+
+.app-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+.topbar {
+  justify-content: space-between;
+  background-color: var(--primary-color-light);
+}
+
+app-sidebar {
+  width: 12%;
+  background-color: var(--primary-color-darker);
+}
+
+.main-content {
+  min-height: 100vh;
+  background-color: var(--primary-color);
+}

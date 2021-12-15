@@ -46,16 +46,5 @@
 
 <div class="flex-col app-container full-size" *ngIf="env.mode === 'demo'">
   <!-- TODO : Extract Topbar component -->
-  <div class="topbar flex-row">
-    <h1>Angular Workshop</h1>
-    <div class="icons">
-      <!-- <div class="settings"></div> -->
-    </div>
-  </div>
-  <div class="main-content flex-row">
-    <app-sidebar></app-sidebar>
-    <div class="content">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 </div>

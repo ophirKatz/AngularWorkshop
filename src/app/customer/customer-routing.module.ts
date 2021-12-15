@@ -6,7 +6,8 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: CustomersDashboardComponent
+    component: CustomersDashboardComponent,
+    outlet: 'secondary'
   },
 ];
 

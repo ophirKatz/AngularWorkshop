@@ -7,12 +7,14 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: OrdersListComponent
+    component: OrdersListComponent,
+    outlet: 'secondary'
   },
   {
     path: 'track/:id',
     pathMatch: 'full',
-    component: OrderTrackingComponent
+    component: OrderTrackingComponent,
+    outlet: 'secondary'
   }
 ];
 

@@ -6,8 +6,8 @@ import { InjectionToken } from '@angular/core';
 export const environment = {
   production: false,
   // Change this to switch between demo and showcase modes
-  mode: 'showcase',
-  // mode: 'demo',
+  // mode: 'showcase',
+  mode: 'demo',
 };
 
 export const ENV: InjectionToken<any> = new InjectionToken<any>('env');
