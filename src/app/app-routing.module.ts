@@ -25,6 +25,12 @@ const routes: Routes = [
     component: HomeComponent,
     loadChildren: () => import('./customer/customer.module').then(m => m.CustomerModule),
   },
+  {
+    path: 'product',
+    pathMatch: 'full',
+    component: HomeComponent,
+    loadChildren: () => import('./product/product.module').then(m => m.ProductModule),
+  },
   // TODO : Add a default route to order
   // Default Route (Remove, leave for exercise)
 ];

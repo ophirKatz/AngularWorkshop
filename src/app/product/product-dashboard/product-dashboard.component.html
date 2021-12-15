@@ -1,0 +1,9 @@
+<div class="flex-column">
+  <div class="header flex-row">
+    <h1>Products</h1>
+  </div>
+  <div class="master-detail flex-row">
+    <app-product-list [products]="products" (productSelected)="onProductSelected($event)"></app-product-list>
+    <app-product-details [product]="selectedProduct"></app-product-details>
+  </div>
+</div>

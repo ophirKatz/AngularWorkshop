@@ -1,0 +1,7 @@
+<div class="flex-column products">
+  <div class="order flex-col" *ngFor="let product of products">
+    <div class="product" (click)="onProductSelected(product)">
+      <h4>{{product.name}} ({{product.id}})</h4>
+    </div>
+  </div>
+</div>

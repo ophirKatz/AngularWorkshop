@@ -1,0 +1,8 @@
+<div class="product-dashboard" *ngIf="product">
+  <div class="details-card">
+    <div class="details flex-column">
+      <h2>product {{product.id}} - {{product.name}}</h2>
+      <button (click)="orderProduct()">Order this product!</button>
+    </div>
+  </div>
+</div>
