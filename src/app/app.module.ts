@@ -1,3 +1,4 @@
+import { AuthModule } from './auth/auth.module';
 import { RoutingModule } from './routing/routing.module';
 import { TemplateSelectionModule } from './template-selection/template-selection.module';
 import { FacadeModule } from './facade/facade.module';
@@ -39,6 +40,7 @@ import { HomeComponent } from './home/home.component';
     FacadeModule,
     TemplateSelectionModule,
     RoutingModule,
+    AuthModule,
 
     OrderModule
     // LoggingModule

@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="panel">
+    <div class="header">
+      <div class="">
+        <h1>
+          Welcome to Angular Workshop!
+        </h1>
+      </div>
+    </div>
+
+    <div class="form">
+      <div class="form-field">
+        <label for="id">
+          User Id
+        </label>
+        <input [(ngModel)]="user.id" />
+      </div>
+      <div class="form-field">
+        <label for="name">
+          Username
+        </label>
+        <input [(ngModel)]="user.name" />
+      </div>
+    </div>
+
+    <div class="submit">
+      <button class="button" (click)="login()" [disabled]="!user.name">Login</button>
+    </div>
+
+    <div class=""></div>
+  </div>
+</div>

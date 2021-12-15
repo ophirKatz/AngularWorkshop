@@ -2,7 +2,11 @@
   <h1>Angular Workshop</h1>
   <div class="icons">
     <!-- <div class="settings"></div> -->
-    <button [routerLink]="['/login']">Login Page</button>
+    <div class="flex-row gap">
+      <p *ngIf="userName">Hello, {{userName}}</p>
+      <p *ngIf="!userName">Hello, guest</p>
+      <button [routerLink]="['/login']">Login Page</button>
+    </div>
   </div>
 </div>
 <div class="main-content flex-row">
