@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Subject, Observable } from 'rxjs';
 import { Order } from './order';
 
 @Injectable({
@@ -11,10 +12,11 @@ export class OrderDataService {
 
   // TODO : Make readonly - think why?
   // TODO : Refactor service-Api to asynchronous
-  public orders: Order[];
+  private orders: BehaviorSubject<Order[]> = new BehaviorSubject<Order[]>([]);
+  public readonly orders$: Observable<Order[]> = this.orders;
 
   constructor() {
-    this.orders = [
+    const orders = [
       {
         id: 1,
         customerId: 1,
@@ -34,5 +36,13 @@ export class OrderDataService {
         amount: 8
       },
     ];
+
+    this.orders.next(orders);
+  }
+
+  public addOrder(order: Order): void {
+    const oldOrders = this.orders.getValue();
+    oldOrders.unshift(order);
+    this.orders.next(oldOrders);
   }
 }

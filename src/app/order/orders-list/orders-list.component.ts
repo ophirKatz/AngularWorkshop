@@ -20,7 +20,7 @@ export class OrdersListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.orders = this.ordersService.orders;
+    this.ordersService.orders$.subscribe(x => this.orders = x);
   }
 
   onOrderClicked(e): void {

@@ -1,0 +1,14 @@
+<div class="flex-col gap">
+  <h1>Create a new order</h1>
+
+  <mat-dialog-content class="mat-typography">
+    <h3>Order {{productName}}</h3>
+    <label>Please enter the amount you want</label>
+    <input [(ngModel)]="order.amount" />
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="order" cdkFocusInitial>Complete Order</button>
+  </mat-dialog-actions>
+</div>

@@ -19,6 +19,7 @@ import { ComponentOverviewModule } from './component-overview/component-overview
 import { OrderModule } from './order/order.module';
 import { StateManagementModule } from './state-management/state-management.module';
 import { HomeComponent } from './home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ComponentOverviewModule,
     InheritanceModule,

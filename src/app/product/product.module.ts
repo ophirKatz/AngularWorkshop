@@ -4,14 +4,19 @@ import { CommonModule } from '@angular/common';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductDashboardComponent } from './product-dashboard/product-dashboard.component';
-
+import { NewOrderDialogComponent } from './new-order-dialog/new-order-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [ProductListComponent, ProductDetailsComponent, ProductDashboardComponent],
+  declarations: [ProductListComponent, ProductDetailsComponent, ProductDashboardComponent, NewOrderDialogComponent],
   imports: [
     CommonModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+    MatDialogModule,
+    FormsModule,
+
   ]
 })
 export class ProductModule { }
