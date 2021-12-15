@@ -7,7 +7,7 @@ import { User } from './user';
 })
 export class AuthService {
 
-  private user: Subject<User> = new BehaviorSubject<User>(undefined);
+  private user: BehaviorSubject<User> = new BehaviorSubject<User>(undefined);
   public readonly user$: Observable<User> = this.user;
 
   constructor() { }
@@ -15,6 +15,10 @@ export class AuthService {
   public saveUser(user: User): void {
     console.log('Saving user...', user);
     this.user.next(user);
+  }
+
+  public get isLoggedIn(): boolean {
+    return this.user.getValue() !== undefined;
   }
 
 }
