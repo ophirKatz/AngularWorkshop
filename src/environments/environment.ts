@@ -1,4 +1,5 @@
 import { InjectionToken } from '@angular/core';
+
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
@@ -6,8 +7,8 @@ import { InjectionToken } from '@angular/core';
 export const environment = {
   production: false,
   // Change this to switch between demo and showcase modes
-  mode: 'showcase',
-  // mode: 'demo',
+  // mode: 'showcase',
+  mode: 'demo',
 };
 
 export const ENV: InjectionToken<any> = new InjectionToken<any>('env');
